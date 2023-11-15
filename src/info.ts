@@ -25,7 +25,7 @@ export const getTranslationInfo = async (
 
     return request(Endpoint.INFO)
         .with({ body })
-        .doing(({ data }) => {
+        .doing((data) => {
             const resBoilerplate: Boilerplate = JSON.parse(data?.split("\n")?.[3]);
             const resData: Data = JSON.parse(resBoilerplate?.[0]?.[2]);
             if (!resData)

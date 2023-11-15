@@ -1,4 +1,3 @@
-import axios, { AxiosResponse } from "axios";
 import UserAgent from "user-agents";
 import { LangCodeGoogle } from "./language";
 
@@ -38,7 +37,7 @@ const request = <T extends EndpointType>(
         return {
             promise,
             doing: <V>(
-                callback: (res: AxiosResponse) => V | undefined
+                callback: (res: any) => V | undefined
             ): Promise<V | null> => (
                 promise.then(callback)
                     .catch(() => undefined)
@@ -59,41 +58,41 @@ const isEmpty = (item: any) => (
 const retrieve = <T extends EndpointType>(endpoint: T, params: Params[T]) => {
     if (endpoint === Endpoint.INFO) {
         const { body } = params as Params[typeof Endpoint.INFO];
-        return axios.post(
+        return fetch(
             "https://translate.google.com/_/TranslateWebserverUi/data/batchexecute?rpcids=MkEWBc&rt=c",
-            body,
             {
+                method: 'POST',
                 headers: {
                     "User-Agent": new UserAgent().toString(),
                     "Content-Type": "application/x-www-form-urlencoded"
-                }
+                },
+                body: body
             }
-        );
+        ).then(response => response?.ok ? response.text() : null);
     }
 
     if (endpoint === Endpoint.TEXT) {
         const { source, target, query } = params as Params[typeof Endpoint.TEXT];
-        return axios.get(
+        return fetch(
             `https://translate.google.com/m?sl=${source}&tl=${target}&q=${query}`,
             {
                 headers: {
                     "User-Agent": new UserAgent().toString()
                 }
             }
-        );
+        ).then(response => response?.ok ? response.text() : null);
     }
 
     if (endpoint === Endpoint.AUDIO) {
         const { lang, text, textLength, speed } = params as Params[typeof Endpoint.AUDIO];
-        return axios.get(
+        return fetch(
             `https://translate.google.com/translate_tts?tl=${lang}&q=${text}&textlen=${textLength}&speed=${speed}&client=tw-ob`,
             {
-                responseType: "arraybuffer",
                 headers: {
                     "User-Agent": new UserAgent().toString()
                 }
             }
-        );
+        ).then(response => response?.ok ? response.arrayBuffer() : null);
     }
 
     throw new Error("Invalid endpoint");

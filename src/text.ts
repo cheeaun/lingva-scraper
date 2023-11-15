@@ -24,7 +24,7 @@ export const getTranslationText = async (
 
     return request(Endpoint.TEXT)
         .with({ source: parsedSource, target: parsedTarget, query: encodedQuery })
-        .doing(({ data }) => {
+        .doing((data) => {
             if (!data)
                 return;
 

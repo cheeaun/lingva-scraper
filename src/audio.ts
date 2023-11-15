@@ -24,5 +24,5 @@ export const getAudio = async (
 
     return request(Endpoint.AUDIO)
         .with({ lang: parsedLang, text: encodedText, textLength, speed })
-        .doing(({ data }) => data ? Array.from(new Uint8Array(data)) : null);
+        .doing((data) => data ? Array.from(new Uint8Array(data)) : null);
 };
