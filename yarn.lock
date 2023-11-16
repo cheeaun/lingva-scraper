@@ -633,10 +633,10 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.1.tgz#20f18294f797f2209b5f65c8e3b5c8e8261d127c"
   integrity sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==
 
-"@types/user-agents@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@types/user-agents/-/user-agents-1.0.2.tgz#3499d4aaf01a004ae9cab4e52b8d8c8b32637733"
-  integrity sha512-WOoL2UJTI6RxV8RB2kS3ZhxjjijI5G1i7mgU7mtlm4LsC1XGCfiV56h+GV4VZnAUkkkLQ4gbFGR/dggT01n0RA==
+"@types/user-agents@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@types/user-agents/-/user-agents-1.0.4.tgz#49bf6760d9ca3858d91e6258835bf2c329b87cf0"
+  integrity sha512-AjeFc4oX5WPPflgKfRWWJfkEk7Wu82fnj1rROPsiqFt6yElpdGFg8Srtm/4PU4rA9UiDUZlruGPgcwTMQlwq4w==
 
 "@types/yargs-parser@*":
   version "21.0.0"
@@ -986,11 +986,6 @@ deepmerge@^4.2.2:
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.2.2.tgz#44d2ea3679b8f4d4ffba33f03d865fc1e7bf4955"
   integrity sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==
 
-detect-indent@~6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-6.0.0.tgz#0abd0f549f69fc6659a254fe96786186b6f528fd"
-  integrity sha512-oSyFlqaTHCItVRGK5RmrmjB+CmaMOW7IaNA/kdxqhoa6d17j/5ce9O9eWXmV/KEdRwqpQA+Vqe8a8Bsybu4YnA==
-
 detect-newline@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/detect-newline/-/detect-newline-3.1.0.tgz#576f5dfc63ae1a192ff192d8ad3af6308991b651"
@@ -1005,11 +1000,6 @@ diff-sequences@^28.0.2:
   version "28.0.2"
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-28.0.2.tgz#40f8d4ffa081acbd8902ba35c798458d0ff1af41"
   integrity sha512-YtEoNynLDFCRznv/XDalsKGSZDoj0U5kLnXvY0JSq3nBboRrZXjD81+eSiwi+nzcZDwedMmcowcxNwwgFW23mQ==
-
-docopt@~0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/docopt/-/docopt-0.6.2.tgz#b28e9e2220da5ec49f7ea5bb24a47787405eeb11"
-  integrity sha512-NqTbaYeE4gA/wU1hdKFdU+AFahpDOpgGLzHP42k6H6DKExJd0A55KEVWYhL9FEmHmgeLvEU2vuKXDuU+4yToOw==
 
 dom-serializer@^2.0.0:
   version "2.0.0"
@@ -1040,15 +1030,6 @@ domutils@^3.0.1:
     dom-serializer "^2.0.0"
     domelementtype "^2.3.0"
     domhandler "^5.0.1"
-
-dot-json@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/dot-json/-/dot-json-1.2.2.tgz#7d35abece4aa22aa75a761388953f98495401bcc"
-  integrity sha512-AKL+GsO4wSEU4LU+fAk/PqN4nQ6PB1vT3HpMiZous9xCzK5S0kh4DzfUY0EfU67jsIXLlu0ty71659N9Nmg+Tw==
-  dependencies:
-    detect-indent "~6.0.0"
-    docopt "~0.6.2"
-    underscore-keypath "~0.0.22"
 
 electron-to-chromium@^1.4.118:
   version "1.4.142"
@@ -2276,24 +2257,11 @@ typescript@^4.7.2:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.2.tgz#1f9aa2ceb9af87cca227813b4310fff0b51593c4"
   integrity sha512-Mamb1iX2FDUpcTRzltPxgWMKy3fhg0TN378ylbktPGPK/99KbDtMQ4W1hwgsbPAsG3a0xKa1vmw4VKZQbkvz5A==
 
-underscore-keypath@~0.0.22:
-  version "0.0.22"
-  resolved "https://registry.yarnpkg.com/underscore-keypath/-/underscore-keypath-0.0.22.tgz#48a528392bb6efc424be1caa56da4b5faccf264d"
-  integrity sha1-SKUoOSu278QkvhyqVtpLX6zPJk0=
+user-agents@^1.1.24:
+  version "1.1.24"
+  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.1.24.tgz#34c300cafc0d1c519e8f78b83309c163459ad571"
+  integrity sha512-GbTRQmV+Ec4dnMwvzaCMgL5JhTAzmyIsAQMiWo1Jr6cTFlTPLaytpzBAQefS7FcfBkzz+NwfGQ4C/lZwjRhKOw==
   dependencies:
-    underscore "*"
-
-underscore@*:
-  version "1.13.3"
-  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.13.3.tgz#54bc95f7648c5557897e5e968d0f76bc062c34ee"
-  integrity sha512-QvjkYpiD+dJJraRA8+dGAU4i7aBbb2s0S3jA45TFOvg2VgqvdCDd/3N6CqA8gluk1W91GLoXg5enMUx560QzuA==
-
-user-agents@^1.0.1033:
-  version "1.0.1033"
-  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.0.1033.tgz#4cc79e0d32f03a40f335b3d164e8cefd83589994"
-  integrity sha512-mmOpLI0ZsgAF2lBBWY1UXwtLpfV5Q4XyVK0igp2sIPd1cXUJ0dLNOvRgr1omXQtPhMNTP7uDKLwwcRSUXT9irQ==
-  dependencies:
-    dot-json "^1.2.2"
     lodash.clonedeep "^4.5.0"
 
 v8-to-istanbul@^9.0.0:
