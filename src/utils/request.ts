@@ -1,5 +1,6 @@
 import UserAgent from "user-agents";
 import { LangCodeGoogle } from "./language";
+const userAgent = new UserAgent();
 
 export const Endpoint = {
     INFO: "info",
@@ -63,7 +64,7 @@ const retrieve = <T extends EndpointType>(endpoint: T, params: Params[T]) => {
             {
                 method: 'POST',
                 headers: {
-                    "User-Agent": new UserAgent().toString(),
+                    "User-Agent": userAgent.random().toString(),
                     "Content-Type": "application/x-www-form-urlencoded"
                 },
                 body: body
@@ -77,7 +78,7 @@ const retrieve = <T extends EndpointType>(endpoint: T, params: Params[T]) => {
             `https://translate.google.com/m?sl=${source}&tl=${target}&q=${query}`,
             {
                 headers: {
-                    "User-Agent": new UserAgent().toString()
+                    "User-Agent": userAgent.random().toString(),
                 }
             }
         ).then(response => response?.ok ? response.text() : null);
@@ -89,7 +90,7 @@ const retrieve = <T extends EndpointType>(endpoint: T, params: Params[T]) => {
             `https://translate.google.com/translate_tts?tl=${lang}&q=${text}&textlen=${textLength}&speed=${speed}&client=tw-ob`,
             {
                 headers: {
-                    "User-Agent": new UserAgent().toString()
+                    "User-Agent": userAgent.random().toString(),
                 }
             }
         ).then(response => response?.ok ? response.arrayBuffer() : null);
